@@ -10,7 +10,7 @@ public class Enemy extends Sprite{
 	public static final int Y_TO_FADE = 400;
 	public static final int Y_TO_DIE = 600;
 	
-	private int step = 20;
+	private int step = 50;
 	private boolean alive = true;
 	private Image pic;
 	public Enemy(int x, int y) {
