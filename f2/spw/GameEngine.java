@@ -22,6 +22,8 @@ public class GameEngine implements KeyListener, GameReporter{
 	private long score = 99999;
 	private double difficulty = 0.1;
 	
+	private long life = 99999;
+	
 	public GameEngine(GamePanel gp, SpaceShip v) {
 		this.gp = gp;
 		this.v = v;		
@@ -81,6 +83,7 @@ public class GameEngine implements KeyListener, GameReporter{
 	
 	public void die(){
 		timer.stop();
+		life = 0;
 	}
 	
 	void controlVehicle(KeyEvent e) {
@@ -99,6 +102,10 @@ public class GameEngine implements KeyListener, GameReporter{
 
 	public long getScore(){
 		return score;
+	}
+	
+	private long getLife(){
+		return life;
 	}
 	
 	@Override
