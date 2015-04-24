@@ -17,9 +17,7 @@ public class Enemy extends Sprite{
 		super(x, y, 5, 10);
 		
 	}
-	private void loadImage{
-		pic = new ImageIcon("oop.jpg").getImage();
-	}
+	
 	@Override
 	public void draw(Graphics2D g) {
 		if(y < Y_TO_FADE)
