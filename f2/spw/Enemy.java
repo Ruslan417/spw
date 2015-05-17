@@ -1,23 +1,23 @@
-package f2.spw;
-
 import java.awt.AlphaComposite;
 import java.awt.Color;
 import java.awt.Graphics2D;
+
+import java.awt.Toolkit;
 import java.awt.Image;
-import javax.swing.ImageIcon;
 
 public class Enemy extends Sprite{
 	public static final int Y_TO_FADE = 400;
 	public static final int Y_TO_DIE = 600;
 	
-	private int step = 50;
+	private int step = 5;
 	private boolean alive = true;
-	private Image pic;
+	
+	
 	public Enemy(int x, int y) {
-		super(x, y, 5, 10);
+		super(x, y, 30, 40);
 		
 	}
-	
+
 	@Override
 	public void draw(Graphics2D g) {
 		if(y < Y_TO_FADE)
@@ -27,12 +27,12 @@ public class Enemy extends Sprite{
 					(float)(Y_TO_DIE - y)/(Y_TO_DIE - Y_TO_FADE)));
 		}
 		
-		if((int)(Math.random()*2) == 0)	
-			g.setColor(Color.GRAY);			
-		else
-			g.setColor(Color.RED);
-		g.fillRect(x, y, width, height);
-	
+		//g.setColor(Color.RED);
+		//g.fillRect(x, y, width, height);
+		
+		
+		Image pic = Toolkit.getDefaultToolkit().getImage("alien.png"); 
+		g.drawImage(pic, x, y, width, height, null);
 		
 	}
 
@@ -41,6 +41,9 @@ public class Enemy extends Sprite{
 		if(y > Y_TO_DIE){
 			alive = false;
 		}
+	}
+	public void hit(){
+		alive = false;
 	}
 	
 	public boolean isAlive(){
