@@ -1,9 +1,10 @@
-package f2.spw;
+//package f2.spw;
 
 public interface GameReporter {
 
 	long getScore();
 	
-	int getYourLife();
+	int getHP();
 
 }
+
