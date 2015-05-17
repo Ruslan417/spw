@@ -96,7 +96,7 @@ public class GameEngine implements KeyListener, GameReporter{
 			for(Enemy2 e2 : enemies2){
 				br = e2.getRectangle();
 				if(br.intersects(er)){
-					score += 200;
+					score += 50;
 					gp.sprites.remove(e);
 					e.hit();
 				}
@@ -160,7 +160,7 @@ public class GameEngine implements KeyListener, GameReporter{
 				//die();
 				v.hit();
 				i.hit();
-				score += 200;
+				score += 100;
 				return;
 			}
 		}
