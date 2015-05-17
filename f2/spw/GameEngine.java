@@ -158,7 +158,7 @@ public class GameEngine implements KeyListener, GameReporter{
 			ir = i.getRectangle();
 			if(ir.intersects(vr)){
 				//die();
-				v.hit();
+				//v.hit();
 				i.hit();
 				score += 100;
 				return;
