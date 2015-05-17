@@ -9,7 +9,7 @@ import java.awt.Image;
 
 public class SpaceShip extends Sprite{
 
-	int hp = 5;
+	int hp = 10;
 	boolean alive = true;
 	int step = 8;
 	
